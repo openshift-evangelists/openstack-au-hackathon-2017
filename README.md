@@ -55,3 +55,39 @@ For more complicated workflows, a Jenkins pipeline can be configured, allowing y
 If you need a database or data store, OpenShift provides a range of pre-defined container images for PostgreSQL, MySQL, MongoDB, Redis and more.
 
 Any container images you bring for applications and services should be able to be run provided they follow best practices, don't require ``root`` access to run and can run as an assigned user ID. If a container image doesn't quite meet these requirements, you will be able to discuss issues around running the container image with the OpenShift mentors who will be present and we can guide you as to how the container image can be made to run, or on a case by case basis create special service accounts under which you will be able to run the container image with any extra privileges required.
+
+Leaning about OpenShift
+-----------------------
+
+If you are new to OpenShift and want to learn the basics, we recommend you first download and read the following free eBooks.
+
+* [OpenShift for Developers](https://www.openshift.com/promotions/for-developers.html) (https://www.openshift.com/promotions/for-developers.html)
+* [DevOps with OpenShift](https://www.openshift.com/promotions/devops-with-openshift.html) (https://www.openshift.com/promotions/devops-with-openshift.html)
+
+These will get you up to speed on how the platform works and how to use it, before delving down into the OpenShift documentation. Just be aware that the books were originally written for an older version of OpenShift, so you may find the web console of the version of OpenShift you will be using a little bit different.
+
+Want to get your hands dirty and experiment with OpenShift prior to the hackathon, you have a number of different choices. The two we recommend are:
+
+**[OpenShift Online](https://www.openshift.com/get-started/) (https://www.openshift.com/get-started/):** This is Red Hat's public hosted OpenShift instance. You can sign up to a free starter account which gives you a minimal set of resources suitable for experimentation and development. Just be aware that due to security restrictions in the platform, you are restricted to deploying existing container images, or deploying from application source code using S2I builders. There is also a paid pro account you can get for OpenShift Online if you need more resources.
+
+**[Minishift](https://www.openshift.org/minishift/) (https://www.openshift.org/minishift/):** This allows you to run up an instance of OpenShift inside of a virtual machine on your own computer. Native virtualisation systems on Linux (KVM), MacOS X (xhyve), or Windows (HyperV) are supported, or you can use Virtual Box.
+
+Need more details and you can access the official OpenShift documentation. You will be using OpenShift 3.6 for the hackathon.
+
+* [OpenShift 3.6 Documentation](https://docs.openshift.com/container-platform/3.6/welcome/index.html) (https://docs.openshift.com/container-platform/3.6/welcome/index.html)
+
+Setions of the documentation which will be most relevant to you as a developer are:
+
+* [CLI Reference](https://docs.openshift.com/container-platform/3.6/cli_reference/index.html)
+* [Developer Guide](https://docs.openshift.com/container-platform/3.6/dev_guide/index.html)
+* [Creating Images](https://docs.openshift.com/container-platform/3.6/creating_images/index.html)
+* [Using Images](https://docs.openshift.com/container-platform/3.6/using_images/index.html)
+
+With discussion of particular programming languages supported by the S2I build mechanism found at:
+
+* [.Net Core](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/dot_net_core.html)
+* [Node.js](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/nodejs.html)
+* [Perl](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/perl.html)
+* [PHP](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/php.html)
+* [Python](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/python.html)
+* [Ruby](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/ruby.html)
