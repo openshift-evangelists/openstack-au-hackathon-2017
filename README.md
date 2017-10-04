@@ -20,6 +20,17 @@ The cloud platforms which will be available at the event for teams to use are Op
 Why choose OpenShift
 --------------------
 
-OpenShift is a next generation platform for deploying web applications, databases or other network based services in a cloud environment. Applications are deployed to a containerised environment. You provide OpenShift with your application source code, or provide the location of an existing container image, and the platform will worry about the details of how to deploy it, keep it running, and make it available to users. Use OpenShift, rather than wasting time on the operations aspects of deploying an application, you can focus on the development of your application.
+OpenShift is a next generation platform for deploying web applications, databases or other network based services in a cloud environment. Applications are deployed to a containerised environment. You provide OpenShift with your application source code, or provide the location of an existing container image, and the platform will worry about the details of how to deploy it, keep it running, and make it available to users. Use OpenShift, and rather than wasting time on the operations aspects of deploying an application, you can focus on the development of your application.
 
-The OpenShift platform is based around standards from the [Open Container Initiative](https://www.opencontainers.org/) for running applications in containers. It uses [Kubernetes](https://kubernetes.io/) to manage the cluster, as well as the orchestration and scheduling of the containers which run your applications. Kubernetes being a platform targeting IT operations, OpenShift adds its own magic source on top, building in workflows and automation to make the platform much easier to use by developers.
+The OpenShift platform is based around standards from the [Open Container Initiative](https://www.opencontainers.org/) for running applications in containers. It uses [Kubernetes](https://kubernetes.io/) to manage the cluster, and orchestration and scheduling of the containers which run your applications. Kubernetes being a platform targeting IT operations, OpenShift adds its own magic source on top, building in workflows and automation to make the platform much easier to use by developers.
+
+A quick tour of OpenShift
+-------------------------
+
+If you want a quick tour of OpenShift and what it is like to use it, the easiest way is to jump on over to the OpenShift Interactive Learning Portal.
+
+* https://learn.openshift.com/
+
+Through this site you can work through a range of interactive tutorials on using different features of OpenShift.
+
+For each tutorial, an instance of OpenShift will be started up for you. You will interact with OpenShift using the web console, as well as a command line client through a terminal session embedded right in your browser. This allows you to try out OpenShift without needing to install any software on your own computer, nor do you need to sign up for any OpenShift service. Once you have done the tutorials, you can use the OpenShift instance to run your own experiments. The OpenShift instance created for you will be automatically shutdown after one hour or when you leave the site.
