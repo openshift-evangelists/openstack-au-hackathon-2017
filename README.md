@@ -34,3 +34,24 @@ If you want a quick tour of OpenShift and what it is like to use it, the easiest
 Through this site you can work through a range of interactive tutorials on using different features of OpenShift.
 
 For each tutorial, an instance of OpenShift will be started up for you. You will interact with OpenShift using the web console, as well as a command line client through a terminal session embedded right in your browser. This allows you to try out OpenShift without needing to install any software on your own computer, nor do you need to sign up for any OpenShift service. Once you have done the tutorials, you can use the OpenShift instance to run your own experiments. The OpenShift instance created for you will be automatically shutdown after one hour or when you leave the site.
+
+Deploying your applications
+---------------------------
+
+You can deploy any stateless 12 factor or cloud native applications, as well as more traditional stateful applications where local persistent storage is required. As persistent storage is available and can be associated with applications, you can also deploy databases, both traditional SQL databases, or newer no SQL data stores or key/value databases.
+
+For your own applications, OpenShift provides you with a number of different ways you can deploy your application. These are:
+
+**Deploy an application from an existing container image:** In this scenario, you would create your container image outside of OpenShift. This can be constructed from a ``Dockerfile`` with tools such as ``docker build`` from the [Moby](https://github.com/moby) project, or indirectly by tools such as [Source-to-Image (S2I)](https://github.com/openshift/source-to-image) from application source code. The container image can be pushed to OpenShift's internal image registry, or hosted on an external image registry. OpenShift can then deploy the container image. This is utilising OpenShift as a Container as a Service (CaaS).
+
+**Build a container image from a Dockerfile and deploy it:** In this scenario, instead of create your container image outside of OpenShift, you can have OpenShift build it for you from a ``Dockerfile``. OpenShift can build the container image from a Git repository hosting the ``Dockerfile`` and any other source files it requires, or you can use a binary build to push the source files from a local directory into OpenShift. Once the container image has been built within OpenShift, it can then be deployed. This is utilising OpenShift as a Container as a Service (CaaS), but where the container image is built within OpenShift for you.
+
+**Build a container image from application source code and deploy it:** In this scenario, you provide OpenShift with your application source files via a Git repository or binary build, and it will construct a container image from it using a Source-to-Image (S2I) builder appropriate for the language or application stack you are using. In this case, you do not even need to know how to write a ``Dockerfile`` to create a container image, as the S2I build process will do everything for you. Once the container image has been built within OpenShift, it can then be deployed. This is utilising OpenShift as a Platform as Service (PaaS), where the platform does the hard work of converting your application source code into a suitable container image.
+
+Whichever mechanism is used, OpenShift wraps the build and deployment mechanism with an automated workflow. When this is linked up to a hosted Git repository using a webhook as callback, you need only worry about working on the code for your application. Whenever you commit and push changes back to your hosted Git repository, OpenShift will automatically re-build the container image for your application and re-deploy your application.
+
+For more complicated workflows, a Jenkins pipeline can be configured, allowing you to integrate testing and migration approval steps, giving you more control over the steps needed to get your application deployed into production.
+
+If you need a database or data store, OpenShift provides a range of pre-defined container images for PostgreSQL, MySQL, MongoDB, Redis and more.
+
+Any container images you bring for applications and services should be able to be run provided they follow best practices, don't require ``root`` access to run and can run as an assigned user ID. If a container image doesn't quite meet these requirements, you will be able to discuss issues around running the container image with the OpenShift mentors who will be present and we can guide you as to how the container image can be made to run, or on a case by case basis create special service accounts under which you will be able to run the container image with any extra privileges required.
