@@ -85,9 +85,14 @@ Setions of the documentation which will be most relevant to you as a developer a
 
 With discussion of particular programming languages supported by the S2I build mechanism found at:
 
+* [Java](https://access.redhat.com/documentation/en-us/red_hat_jboss_middleware_for_openshift/3/html-single/red_hat_java_s2i_for_openshift/)
 * [.Net Core](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/dot_net_core.html)
 * [Node.js](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/nodejs.html)
 * [Perl](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/perl.html)
 * [PHP](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/php.html)
 * [Python](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/python.html)
 * [Ruby](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/ruby.html)
+
+In the case of Java, a number of different additional application servers/stacks are supported through custom S2I builders:
+
+* [Wildfly](https://github.com/openshift-s2i/s2i-wildfly)
