@@ -92,7 +92,3 @@ With discussion of particular programming languages supported by the S2I build m
 * [PHP](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/php.html)
 * [Python](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/python.html)
 * [Ruby](https://docs.openshift.com/container-platform/3.6/using_images/s2i_images/ruby.html)
-
-In the case of Java, a number of different additional application servers/stacks are supported through custom S2I builders:
-
-* [Wildfly](https://github.com/openshift-s2i/s2i-wildfly)
